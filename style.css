@@ -1,3 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap");
+
+.league-spartan {
+   font-family: "League Spartan", sans-serif;
+   font-optical-sizing: auto;
+   font-weight: 700;
+   font-style: normal;
+}
+
 .attribution {
    font-size: 11px;
    text-align: center;
