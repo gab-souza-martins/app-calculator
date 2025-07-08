@@ -109,6 +109,12 @@ header p {
    border-radius: 100%;
    background-color: var(--extra-key-bg_toggle);
 }
+.theme-toggle-box:hover .theme-toggle-btn {
+   filter: brightness(150%);
+}
+.theme-toggle-box:active .theme-toggle-btn {
+   filter: brightness(75%);
+}
 
 main {
    margin-top: 1rem;
@@ -143,12 +149,24 @@ h1 {
    max-width: 80px;
    cursor: pointer;
 }
+.key:hover {
+   filter: brightness(150%);
+}
+.key:active {
+   filter: brightness(75%);
+}
 
 .key-light {
    background-color: var(--light-key-bg);
    color: var(--regular-text);
    font-size: 1.5em;
    box-shadow: 0 4px var(--light-key-shadow);
+}
+.key-light:hover {
+   filter: brightness(125%);
+}
+.key-light:active {
+   filter: brightness(75%);
 }
 .key-highlight {
    background-color: var(--key-bg);
