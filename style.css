@@ -75,30 +75,45 @@ body {
 }
 
 .result {
-   padding: 0.5rem 1rem;
+   padding: 1rem;
    background-color: var(--screen-bg);
+   border-radius: 0.5em;
    text-align: right;
 }
 
 .keypad {
    margin-bottom: 1rem;
    padding: 1rem;
+   border-radius: 0.5em;
    background-color: var(--toggle-and-keypad-bg);
    grid-template-columns: repeat(4, 1fr);
    gap: 0.5rem;
 }
 
+.key {
+   border: none;
+   border-radius: 0.5em;
+}
+
 .key-light {
    background-color: var(--light-key-bg);
    color: var(--regular-text);
+   font-size: 1.5em;
 }
 .key-highlight {
    background-color: var(--key-bg);
    color: var(--white-text);
+   font-size: 1em;
 }
 .key-extrahighlight {
    background-color: var(--extra-key-bg_toggle);
    color: var(--extra-text);
+   font-size: 1em;
+   grid-column: 3 / span 2;
+}
+
+#key-reset {
+   grid-column: 1 / span 2;
 }
 
 h1,
