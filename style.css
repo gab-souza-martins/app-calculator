@@ -63,17 +63,29 @@
 
 body {
    background-color: var(--main-bg);
-}
-.result {
-   background-color: var(--screen-bg);
+   padding: 1rem;
 }
 
 .grid {
    display: grid;
 }
+
+.main-div {
+   gap: 1rem;
+}
+
+.result {
+   padding: 0.5rem 1rem;
+   background-color: var(--screen-bg);
+   text-align: right;
+}
+
 .keypad {
+   margin-bottom: 1rem;
+   padding: 1rem;
    background-color: var(--toggle-and-keypad-bg);
    grid-template-columns: repeat(4, 1fr);
+   gap: 0.5rem;
 }
 
 .key-light {
