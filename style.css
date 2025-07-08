@@ -12,6 +12,7 @@
 
    --regular-text: hsl(221, 14%, 31%);
    --extra-text: hsl(0, 0%, 100%);
+   --title-text: hsl(0, 0%, 100%);
    --white-text: hsl(0, 0%, 100%);
 }
 .theme2 {
@@ -27,6 +28,7 @@
    --extra-key-shadow: hsl(25, 99%, 27%);
 
    --regular-text: hsl(60, 10%, 19%);
+   --title-text: hsl(60, 10%, 19%);
 }
 .theme3 {
    --main-bg: hsl(268, 75%, 9%);
@@ -41,6 +43,7 @@
    --extra-key-shadow: hsl(177, 92%, 70%);
 
    --regular-text: hsl(52, 100%, 62%);
+   --title-text: hsl(52, 100%, 62%);
    --extra-text: hsl(198, 20%, 13%);
 }
 
@@ -59,24 +62,43 @@
 }
 
 body {
-   background-color: var(--Very-dark-desaturated-blue-mainbg);
+   background-color: var(--main-bg);
 }
 .result {
-   background-color: var(--Very-dark-desaturated-blue-screenbg);
+   background-color: var(--screen-bg);
 }
 
 .grid {
    display: grid;
 }
 .keypad {
-   background-color: var(--Very-dark-desaturated-blue-togglebg-keypadbg);
+   background-color: var(--toggle-and-keypad-bg);
    grid-template-columns: repeat(4, 1fr);
+}
+
+.key-light {
+   background-color: var(--light-key-bg);
+   color: var(--regular-text);
+}
+.key-highlight {
+   background-color: var(--key-bg);
+   color: var(--white-text);
+}
+.key-extrahighlight {
+   background-color: var(--extra-key-bg_toggle);
+   color: var(--extra-text);
+}
+
+h1,
+h2 {
+   color: var(--title-text);
 }
 
 .attribution {
    font-size: 11px;
    text-align: center;
+   color: var(--title-text);
 }
 .attribution a {
-   color: hsl(228, 45%, 44%);
+   color: var(--title-text);
 }
