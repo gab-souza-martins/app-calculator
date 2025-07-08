@@ -87,33 +87,39 @@ body {
    border-radius: 0.5em;
    background-color: var(--toggle-and-keypad-bg);
    grid-template-columns: repeat(4, 1fr);
+   justify-items: center;
    gap: 0.5rem;
 }
 
 .key {
    border: none;
-   border-radius: 0.5em;
+   border-radius: 0.25em;
+   height: 50px;
 }
 
 .key-light {
    background-color: var(--light-key-bg);
    color: var(--regular-text);
    font-size: 1.5em;
+   width: 50px;
 }
 .key-highlight {
    background-color: var(--key-bg);
    color: var(--white-text);
    font-size: 1em;
+   width: 50px;
 }
 .key-extrahighlight {
    background-color: var(--extra-key-bg_toggle);
    color: var(--extra-text);
    font-size: 1em;
    grid-column: 3 / span 2;
+   width: 116px;
 }
 
 #key-reset {
    grid-column: 1 / span 2;
+   width: 116px;
 }
 
 h1,
