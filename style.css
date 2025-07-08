@@ -59,6 +59,9 @@
    font-weight: 700;
    font-style: normal;
 }
+.small-text {
+   font-size: 12px;
+}
 
 body {
    background-color: var(--main-bg);
@@ -69,7 +72,41 @@ body {
    display: grid;
 }
 
-.main-div {
+header {
+   grid-template-columns: repeat(5, 1fr);
+   align-items: center;
+   justify-items: left;
+}
+
+h2 {
+   grid-column: 1 / span 3;
+}
+
+h1,
+h2,
+header p {
+   color: var(--outer-text);
+}
+
+.theme-toggle-box {
+   display: flex;
+   align-items: center;
+   padding: 0.2rem;
+   width: 4.5rem;
+   height: 1.5rem;
+   border-radius: 1.5rem;
+   background-color: var(--toggle-and-keypad-bg);
+   cursor: pointer;
+}
+.theme-toggle-btn {
+   width: 1.2rem;
+   height: 1.2rem;
+   border-radius: 100%;
+   background-color: var(--extra-key-bg_toggle);
+}
+
+main {
+   margin-top: 1rem;
    gap: 1rem;
 }
 
@@ -78,6 +115,9 @@ body {
    background-color: var(--screen-bg);
    border-radius: 0.5em;
    text-align: right;
+}
+h1 {
+   font-size: 2em;
 }
 
 .keypad {
@@ -94,6 +134,7 @@ body {
    border: none;
    border-radius: 0.25em;
    height: 50px;
+   cursor: pointer;
 }
 
 .key-light {
@@ -124,18 +165,7 @@ body {
    width: 116px;
 }
 
-h1 {
-   font-size: 2em;
-}
-
-h1,
-h2,
-header p {
-   color: var(--outer-text);
-}
-
 .attribution {
-   font-size: 11px;
    text-align: center;
    color: var(--outer-text);
 }
