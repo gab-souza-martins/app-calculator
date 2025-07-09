@@ -7,6 +7,7 @@ const enableThemeOne = () => {
         themeToggleBox.style.justifyContent = "left";
     }
     localStorage.setItem("theme", "themeOne");
+    theme = "themeOne";
 };
 const enableThemeTwo = () => {
     document.body.classList.add("theme2");
@@ -14,6 +15,7 @@ const enableThemeTwo = () => {
         themeToggleBox.style.justifyContent = "center";
     }
     localStorage.setItem("theme", "themeTwo");
+    theme = "themeTwo";
 };
 const enableThemeThree = () => {
     document.body.classList.remove("theme2");
@@ -22,29 +24,24 @@ const enableThemeThree = () => {
         themeToggleBox.style.justifyContent = "right";
     }
     localStorage.setItem("theme", "themeThree");
+    theme = "themeThree";
 };
 window.addEventListener("load", () => {
-    if (theme === null || theme === "themeOne") {
-        enableThemeOne();
-    }
-    if (theme === "themeTwo") {
-        enableThemeTwo();
-    }
-    if (theme === "themeThree") {
-        enableThemeThree();
+    switch (localStorage.getItem("theme")) {
+        case "themeTwo":
+            enableThemeTwo();
+            break;
+        case "themeThree":
+            enableThemeThree();
+            break;
+        default:
+            enableThemeOne();
     }
 });
 if (themeToggleBox) {
     theme = localStorage.getItem("theme");
     themeToggleBox.addEventListener("click", () => {
-        console.log("click");
         switch (theme) {
-            case null:
-                enableThemeTwo();
-                break;
-            case "themeOne":
-                enableThemeTwo();
-                break;
             case "themeTwo":
                 enableThemeThree();
                 break;
@@ -52,6 +49,7 @@ if (themeToggleBox) {
                 enableThemeOne();
                 break;
             default:
+                enableThemeTwo();
                 break;
         }
     });
