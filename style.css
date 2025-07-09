@@ -123,14 +123,18 @@ main {
    gap: 1rem;
 }
 
-.result {
+#display {
+   min-height: 4rem;
+   margin: auto;
+   max-width: 85vw;
    padding: 1rem;
    background-color: var(--screen-bg);
+   border: none;
    border-radius: 0.5em;
    text-align: right;
-}
-h1 {
    font-size: 2em;
+   color: var(--outer-text);
+   overflow: auto;
 }
 
 .keypad {
