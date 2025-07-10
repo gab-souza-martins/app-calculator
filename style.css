@@ -125,8 +125,8 @@ main {
 
 #display {
    min-height: 4rem;
+   width: 100%;
    margin: auto;
-   max-width: 85vw;
    padding: 1rem;
    background-color: var(--screen-bg);
    border: none;
